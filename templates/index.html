@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salary Prediction</title>
+</head>
+<body>
+<h1> Predict Salary Based on Experience</h1>
+<form action="{{url_for('predict')}}" method="post">
+    <label for="exp">Experience Level</label>
+    <select name="exp" id="exp">
+        <option value=1,0,0,0>Entry</option>
+        <option value=0,0,1,0>Mid Level</option>
+        <option value=0,0,0,1>Senior</option>
+        <option value=0,1,0,0>Executive</option>
+        
+    </select>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+
+{{ prediction_text}}
+</body>
+</html>
